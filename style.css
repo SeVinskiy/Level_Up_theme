@@ -11,7 +11,7 @@ Version: 1.0
         transform: translateY(0);
     }
     to {
-        transform: translateY(20px);  
+        transform: translateY(20px);
     }
 }
 
@@ -38,7 +38,7 @@ Version: 1.0
         transform: rotate(0);
     }
     to {
-        transform: rotate(.5turn); 
+        transform: rotate(.5turn);
     }
 }
 
@@ -47,7 +47,7 @@ Version: 1.0
         transform: rotate(.5turn);
     }
     to {
-        transform: rotate(0); 
+        transform: rotate(0);
     }
 }
 
@@ -56,8 +56,12 @@ Version: 1.0
 	margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 body {
-	font-family: 'Open Sans'; 
+	font-family: 'Open Sans';
     color: #fff;
     background: #fff;
 }
@@ -82,7 +86,7 @@ p, span, h1, h2, h3, h4, h5 {
     position: absolute;
     top: -55px;
     margin: 0 auto;
-    width: 100%; 
+    width: 100%;
 }
 
 .containerHeaderSiteMenu > ul {
@@ -147,35 +151,31 @@ p, span, h1, h2, h3, h4, h5 {
 
 .containerHeaderSiteMenu ul li:nth-child(1) {
     transform: rotate(6deg) translate(-5px,-7px);
-} 
+}
 
 .containerHeaderSiteMenu ul li:nth-child(2) {
     transform: rotate(-4deg) translate(-5px,-3px);
-} 
+}
 
 .containerHeaderSiteMenu ul li:nth-child(3) {
     transform: rotate(5deg) translate(-3px,-10px);
-} 
+}
 
 .containerHeaderSiteMenu ul li:nth-child(4) {
     transform: rotate(-2deg) translate(6px,-12px);
-} 
+}
 
 .containerHeaderSiteMenu ul li:nth-child(5) {
     transform: rotate(8deg) translate(-4px,-6px);
-} 
+}
 
 .containerHeaderSiteMenu ul li:nth-child(6) {
     transform: rotate(-5deg) translate(4px,-10px);
-} 
+}
 
 .containerHeaderSiteMenu ul li:nth-child(7) {
     transform: rotate(6deg) translate(-2px,-8px);
-} 
-
-.containerHeaderSiteMenu ul li:nth-child(8) {
-    transform: rotate(-3deg) translate(7px,-7px);
-} 
+}
 
 .containerHeaderSiteMenu ul li a {
     color: #000;
@@ -186,7 +186,6 @@ p, span, h1, h2, h3, h4, h5 {
 .liMiniMenu {
     color: #000;
     padding: 7px 10px 10px 38px;
-    list-style: none;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 14px;
@@ -199,7 +198,7 @@ p, span, h1, h2, h3, h4, h5 {
 }
 
 .containerHeaderLogo {
-    margin: 20px auto; 
+    margin: 20px auto;
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -227,8 +226,8 @@ p, span, h1, h2, h3, h4, h5 {
     color: var(--blue-color);
 }
 
-.containerHeaderLogo > div { 
-    min-width: 320px;
+.containerHeaderLogo > div {
+    width: 320px;
     font-size: 18px;
     border-top: 2px solid var(--blue-color);
 }
@@ -237,7 +236,7 @@ p, span, h1, h2, h3, h4, h5 {
     height: 170px;
 }
 
-.headerNameCenter p:nth-child(1) {   
+.headerNameCenter p:nth-child(1) {
     font-size: 50px;
 }
 
@@ -259,7 +258,7 @@ p, span, h1, h2, h3, h4, h5 {
 
 .containerHeaderKursMenu {
     background: var(--blue-color);
-    border-bottom: 4px solid var(--dark-grey-color); 
+    border-bottom: 4px solid var(--dark-grey-color);
 }
 
 .containerHeaderKursMenu > ul {
@@ -278,28 +277,52 @@ p, span, h1, h2, h3, h4, h5 {
     -moz-justify-content: center;
     -ms-justify-content: center;
 
-    -webkit-flex-wrap: wrap;
-    -o-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: nowrap;
+    -o-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
-.containerHeaderKursMenu ul li {
-    display: block;
-    list-style: none;
+.containerHeaderKursMenu > ul > li {
+    -webkit-display: flex;
+    -o-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+
+    -webkit-flex-direction: row;
+    -o-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
     text-transform: uppercase;
     font-size: 14px;
-    padding: 23px 20px;
+    padding: 14px;
     font-weight: bold;
-} 
+    border-left: 1px solid #fff;
+}
+
+.containerHeaderKursMenu > ul > li:first-child {
+    border-left: none;
+}
+
+.containerHeaderKursMenu > ul > li:nth-child(3) {
+    min-width: 178px;
+}
 
 .containerHeaderKursMenu ul li:hover {
     background: var(--dark-grey-color);
+}
+
+.containerHeaderKursMenu ul li ul {
+    display: none;
 }
 
 .minimazeKursMenu {
@@ -307,7 +330,7 @@ p, span, h1, h2, h3, h4, h5 {
     -o-display: flex;
     -moz-display: flex;
     -ms-display: flex;
-    
+
     -webkit-align-items: stretch;
     -o-align-items: stretch;
     -moz-align-items: stretch;
@@ -323,8 +346,10 @@ p, span, h1, h2, h3, h4, h5 {
     justify-content: space-between;
 }
 
-.minimazeKursMenu i {
-    padding: 0 20px;
+.minimazeKursMenu i.fa-search,
+.minimazeKursMenu i.fa-th-list {
+    padding-right: 20px;
+    padding-left: 20px;
     line-height: 25px;
     font-size: 20px;
 }
@@ -338,23 +363,98 @@ p, span, h1, h2, h3, h4, h5 {
 }
 
 i.fa-th-list {
-    padding-top: 5px;
+    padding-top: 18px;
 }
 
 i.fa-th-list:hover {
     background-color: #454545;
 }
 
-.findKurs {
-    display: none;
+div.inputContainer {
+    position: absolute;
+    height: 28px;
+    background: #1e87be;
+    top: 51px;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
 }
+
+input.findKurs {
+    display: block;
+    height: 24px;
+    width: 180px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+ul.kursColumnDisplay {
+  flex-direction: column;
+  width: 100%;
+}
+
+ul.kursColumnDisplay li {
+  display: block;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  background: linear-gradient(90deg, #1e87be, #ffffff);
+}
+
+ul.kursColumnDisplay + i {
+  display: none;
+}
+
+li.insertedLiKurs {
+  padding: 8px;
+  border-bottom: 2px solid #454545;
+  border-radius: 0 0 15px 15px;
+  background: rgb(30, 135, 190);
+}
+
+ul.liChildKurs {
+  display: block !important;
+  left: 0;
+  position: absolute;
+  color: #fff;
+  top: 51px;
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 9%, #1e87be 9%);
+}
+
+ul.secontInsertedUl li {
+  padding: 5px;
+  margin-top: 2px;
+  background: #fff;
+  text-transform: none;
+  border-bottom: 1px solid #000;
+  border-radius: 10px;
+}
+
+ul.secontInsertedUl li:hover {
+    background: linear-gradient(to top, #aafbff, #fff, #aafbff);
+}
+
+ul.secontInsertedUl li a {
+  color: #454545;
+}
+
+ul.secontInsertedUl {
+  display: flex !important;
+  flex-direction: column;
+}
+
+ul.secontInsertedUl li a {
+  font-size: 12px;
+}
+
+
 
 .section1 {
     background-image: url(img/career_back.jpg);
     height: 360px;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -364,17 +464,17 @@ i.fa-th-list:hover {
     -o-flex-direction: row;
     -moz-flex-direction: row;
     -ms-flex-direction: row;
-    
+
     -webkit-justify-content: space-around;
     -o-justify-content: space-around;
     -moz-justify-content: space-around;
     -ms-justify-content: space-around;
-    
+
     -webkit-align-items: center;
     -o-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -403,7 +503,7 @@ i.fa-th-list:hover {
     -o-opacity: 0;
     -moz-opacity: 0;
     -ms-opacity: 0;
-    
+
     opacity: 0;
 }
 
@@ -454,7 +554,7 @@ i.fa-th-list:hover {
 }
 
 .section3 > div {
-    
+
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -500,7 +600,7 @@ i.fa-th-list:hover {
 }
 
 .section5 {
-    
+
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -550,7 +650,7 @@ footer {
     background-image: url(img/notebook.png);
     background-repeat: repeat-x;
     min-height: 332px;
-    
+
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -588,7 +688,7 @@ footer p:first-child {
 }
 
 footer button {
-    padding: 5px 22px;
+    padding: 5px 25px;
     background: rgba(245, 245, 245, 0);
     text-transform: uppercase;
     font-size: 14px;
@@ -602,7 +702,7 @@ footer button {
 
 footer > div  {
     height: 100%;
-    
+
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -631,7 +731,7 @@ footer > div  {
 
 .socialIcon {
     width: 100%;
-    
+
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -663,9 +763,13 @@ footer .fa:hover {
     color: #fff;
     background: var(--blue-color);
 }
+footer input {
+  height: 24px;
+  border: 2px solid #1e87be;
+  border-radius: 4px;
+}
 
 .HelpOnline {
-    
     -webkit-display: flex;
     -o-display: flex;
     -moz-display: flex;
@@ -730,7 +834,7 @@ div.fixed {
         width: 100%;
     }
     .containerHeaderKursMenu ul li {
-        padding: 3px 5px;
+        padding: 14px 5px;
     }
     .section3 img {
         height: 200px;
@@ -748,6 +852,25 @@ div.fixed {
     }
     .headerContactLeft {
         text-align: left;
+    }
+    div.inputContainer {
+      position: relative;
+      display: inline-block;
+      top: 0;
+      right: 0;
+      padding: 0;
+      background: none;
+    }
+    ul.liChildKurs {
+      position: initial;
+      background: none;
+    }
+    ul.kursColumnDisplay li {
+      border: 1px solid #fff;
+    }
+    li.insertedLiKurs {
+      margin-top: 2px;
+      border-radius: 15px;
     }
     .section1 img {
         display: none;
@@ -769,7 +892,7 @@ div.fixed {
         background-image: url(img/stick4.png);
         background-position: bottom;
         background-repeat: no-repeat;
-        background-size: cover; 
+        background-size: cover;
     }
     .containerHeaderSiteMenu > ul {
         flex-direction: column;

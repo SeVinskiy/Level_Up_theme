@@ -418,7 +418,7 @@ ul.liChildKurs {
   position: absolute;
   color: #fff;
   top: 51px;
-  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 9%, #1e87be 9%);
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(0% + 16px), #1e87be calc(0% + 16px));
 }
 
 ul.secontInsertedUl li {
